@@ -1,1 +1,194 @@
-<p> Politicas de Privacidade do Aplicativo ChurrasCalc</p>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Políticas de Privacidade - Devs T I LTDA | ChurrasCalc</title>
+    
+  <!-- CSS Externos -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); min-height: 100vh; padding-top: 100px; }
+    .header { position: fixed; top: 0; width: 100%; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; padding: 1rem 0; transition: all 0.3s ease; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem; }
+    .logo { font-size: 1.8rem; font-weight: 700; color: #667eea; text-decoration: none; }
+    .nav-menu { display: flex; list-style: none; gap: 2rem; }
+    .nav-menu a { text-decoration: none; color: #333; font-weight: 500; transition: color 0.3s ease; }
+    .nav-menu a:hover { color: #667eea; }
+    .mobile-menu-btn { display: none; flex-direction: column; cursor: pointer; padding: 0.5rem; }
+    .mobile-menu-btn span { width: 25px; height: 3px; background: #333; margin: 3px 0; transition: 0.3s; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 2rem; }
+    .page-header { text-align: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 4rem 2rem; border-radius: 20px; margin-bottom: 3rem; animation: fadeInUp 1s ease; }
+    .page-header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+    .page-header p { font-size: 1.2rem; opacity: 0.9; }
+    .last-updated { background: rgba(255, 255, 255, 0.2); padding: 0.5rem 1rem; border-radius: 20px; display: inline-block; margin-top: 1rem; font-size: 0.9rem; }
+    .content-wrapper { background: white; border-radius: 20px; padding: 3rem; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); animation: fadeInUp 1s ease 0.2s both; }
+    .policy-nav { background: #f8f9fa; border-radius: 15px; padding: 2rem; margin-bottom: 3rem; }
+    .policy-nav h3 { color: #333; margin-bottom: 1rem; font-size: 1.3rem; }
+    .policy-nav ul { list-style: none; }
+    .policy-nav li { margin-bottom: 0.5rem; }
+    .policy-nav a { color: #667eea; text-decoration: none; font-weight: 500; transition: color 0.3s ease; }
+    .policy-nav a:hover { color: #764ba2; }
+    .policy-section { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #eee; }
+    .policy-section:last-child { border-bottom: none; }
+    .policy-section h2 { color: #333; font-size: 2rem; font-weight: 600; margin-bottom: 1rem; padding-top: 1rem; }
+    .policy-section h3 { color: #667eea; font-size: 1.3rem; font-weight: 600; margin: 1.5rem 0 1rem 0; }
+    .policy-section p { margin-bottom: 1rem; color: #555; line-height: 1.7; }
+    .policy-section ul { margin-bottom: 1rem; padding-left: 2rem; }
+    .policy-section li { margin-bottom: 0.5rem; color: #555; }
+    .highlight-box { background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%); border-left: 4px solid #667eea; padding: 1.5rem; border-radius: 10px; margin: 1.5rem 0; }
+    .highlight-box h4 { color: #667eea; font-weight: 600; margin-bottom: 0.5rem; }
+    .contact-section { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 2rem; border-radius: 15px; text-align: center; margin-top: 2rem; }
+    .contact-section h3 { margin-bottom: 1rem; }
+    .contact-section p { margin-bottom: 1rem; opacity: 0.9; }
+    .contact-button { display: inline-block; background: rgba(255, 255, 255, 0.2); color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 25px; font-weight: 600; transition: background 0.3s ease; }
+    .contact-button:hover { background: rgba(255, 255, 255, 0.3); }
+    @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: translateY(0);} }
+    @media (max-width: 768px) {
+      .page-header h1 { font-size: 2rem; }
+      .content-wrapper { padding: 2rem 1.5rem; }
+      .policy-nav { padding: 1.5rem; }
+      .nav-menu { display: none; }
+      .mobile-menu-btn { display: flex; }
+      .nav-menu.active { display: flex; position: absolute; top: 100%; left: 0; width: 100%; background: rgba(255, 255, 255, 0.98); flex-direction: column; padding: 1rem 2rem; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); }
+    }
+    html { scroll-behavior: smooth; }
+    .back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.2rem; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; z-index: 1000; }
+    .back-to-top.show { opacity: 1; }
+    .back-to-top:hover { transform: translateY(-3px); }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Devs T I LTDA</a>
+      <nav class="nav-menu">
+        <a href="index.html">Início</a>
+        <a href="index.html#services">Serviços</a>
+        <a href="index.html#about">Sobre</a>
+        <a href="index.html#contact">Contato</a>
+        <a href="contato.html">Contato Completo</a>
+        <a href="politicas.html">Políticas</a>
+      </nav>
+      <div class="mobile-menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="page-header">
+      <h1>Políticas de Privacidade</h1>
+      <p>Transparência e proteção dos seus dados são nossa prioridade</p>
+      <div class="last-updated">
+        <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>
+        Última atualização: 12 de Agosto de 2025
+      </div>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="policy-nav" data-aos="fade-up">
+        <h3><i class="fas fa-list" style="margin-right: 0.5rem;"></i>Índice</h3>
+        <ul>
+          <li><a href="#introducao">1. Introdução</a></li>
+          <li><a href="#dados-coletados">2. Dados Coletados</a></li>
+          <li><a href="#uso-dados">3. Como Usamos seus Dados</a></li>
+          <li><a href="#compartilhamento">4. Compartilhamento de Dados</a></li>
+          <li><a href="#seguranca">5. Segurança dos Dados</a></li>
+          <li><a href="#direitos">6. Seus Direitos</a></li>
+          <li><a href="#permissoes">7. Permissões do App</a></li>
+          <li><a href="#alteracoes">8. Alterações na Política</a></li>
+          <li><a href="#contato">9. Contato</a></li>
+        </ul>
+      </div>
+
+      <section id="introducao" class="policy-section" data-aos="fade-up">
+        <h2>1. Introdução</h2>
+        <p>O ChurrasCalc, publicado por <strong>Devs T I LTDA</strong>, auxilia no planejamento de churrascos por meio de cálculos, checklist e histórico. Esta política explica como tratamos seus dados em conformidade com a LGPD.</p>
+        <div class="highlight-box">
+          <h4>Nossa Promessa</h4>
+          <p>Minimizar a coleta, manter dados locais sempre que possível e ser transparentes sobre permissões e compartilhamentos.</p>
+        </div>
+      </section>
+
+      <section id="dados-coletados" class="policy-section" data-aos="fade-up">
+        <h2>2. Dados Coletados</h2>
+        <h3>2.1 Fornecidos por você</h3>
+        <ul>
+          <li>Itens do checklist, configurações e históricos inseridos no app.</li>
+        </ul>
+        <h3>2.2 Coletados automaticamente</h3>
+        <p>Não coletamos dados pessoais automaticamente. Não utilizamos analytics por padrão.</p>
+      </section>
+
+      <section id="uso-dados" class="policy-section" data-aos="fade-up">
+        <h2>3. Como Usamos seus Dados</h2>
+        <ul>
+          <li>Salvar preferências e conteúdo do checklist/histórico no <strong>armazenamento local</strong> do dispositivo (GetStorage).</li>
+          <li>Gerar conteúdo para <strong>compartilhamento</strong> quando você aciona o recurso de compartilhar (share_plus).</li>
+        </ul>
+      </section>
+
+      <section id="compartilhamento" class="policy-section" data-aos="fade-up">
+        <h2>4. Compartilhamento de Dados</h2>
+        <p>Não vendemos ou compartilhamos seus dados com terceiros. O envio de conteúdo ocorre apenas quando você opta por compartilhar por meios de outros aplicativos instalados.</p>
+      </section>
+
+      <section id="seguranca" class="policy-section" data-aos="fade-up">
+        <h2>5. Segurança dos Dados</h2>
+        <p>Adotamos boas práticas de desenvolvimento. Recomendamos não inserir informações sensíveis no app, pois os dados ficam armazenados no próprio dispositivo.</p>
+      </section>
+
+      <section id="direitos" class="policy-section" data-aos="fade-up">
+        <h2>6. Seus Direitos</h2>
+        <ul>
+          <li>Acessar, corrigir ou excluir dados armazenados localmente.</li>
+          <li>Limpar dados do app via sistema operacional ou pelas opções internas, quando disponíveis.</li>
+        </ul>
+      </section>
+
+      <section id="permissoes" class="policy-section" data-aos="fade-up">
+        <h2>7. Permissões do App</h2>
+        <ul>
+          <li><strong>Internet:</strong> utilizada por bibliotecas do Flutter e para compartilhar conteúdo em outros apps. Não há sincronização com servidores próprios.</li>
+          <li><strong>Consultas de pacotes/PROCESS_TEXT (Android):</strong> permite interagir com apps capazes de processar/compartilhar texto. Não coletamos dados desses apps.</li>
+          <li><strong>Sem acesso</strong> a localização, câmera, microfone ou contatos.</li>
+        </ul>
+      </section>
+
+      <section id="alteracoes" class="policy-section" data-aos="fade-up">
+        <h2>8. Alterações na Política</h2>
+        <p>Podemos atualizar esta política. Publicaremos a versão vigente nesta página com a data de atualização.</p>
+      </section>
+
+      <section id="contato" class="policy-section" data-aos="fade-up">
+        <h2>9. Contato</h2>
+        <p>Para dúvidas, fale com a <strong>Devs T I LTDA</strong> em: <a href="mailto:devstecnologia@gmail.com">devstecnologia@gmail.com</a> • Tel.: +55 11 95682-9669</p>
+      </section>
+
+      <div class="contact-section" data-aos="fade-up">
+        <h3>Dúvidas sobre Privacidade?</h3>
+        <p>Nossa equipe está pronta para ajudar.</p>
+        <a href="contato.html" class="contact-button"><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i> Entre em Contato</a>
+      </div>
+    </div>
+  </div>
+
+  <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    window.addEventListener('scroll', function() { const header = document.querySelector('.header'); header.style.background = (window.scrollY > 100) ? 'rgba(255, 255, 255, 0.98)' : 'rgba(255, 255, 255, 0.95)'; });
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn'); const navMenu = document.querySelector('.nav-menu'); if (mobileMenuBtn) { mobileMenuBtn.addEventListener('click', function() { navMenu.classList.toggle('active'); }); }
+    const backToTopButton = document.getElementById('backToTop'); window.addEventListener('scroll', function() { if (window.scrollY > 300) { backToTopButton.classList.add('show'); } else { backToTopButton.classList.remove('show'); } }); backToTopButton.addEventListener('click', function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => { anchor.addEventListener('click', function (e) { e.preventDefault(); const target = document.querySelector(this.getAttribute('href')); if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); } }); });
+  </script>
+</body>
+</html>
