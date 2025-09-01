@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitação de Exclusão de Dados - Horafy Professional</title>
+
+    <!-- CSS Externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #667eea;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Content */
+        .content-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        /* Sections */
+        .policy-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+        }
+
+        .policy-section h2 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .policy-section h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .policy-section ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Email template */
+        .email-template {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 2rem 0;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .email-template .email-header {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: #667eea;
+        }
+
+        .email-template .email-field {
+            margin-bottom: 0.5rem;
+        }
+
+        .email-template .email-label {
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .email-template .email-body {
+            margin-top: 1rem;
+            white-space: pre-line;
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+            margin: 0.5rem;
+        }
+
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Warning box */
+        .warning-box {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            border-left: 4px solid #ff6b6b;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .warning-box h4 {
+            color: #d63031;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: flex; }
+
+            .nav-menu.active {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Horafy Professional</a>
+            <nav class="nav-menu">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="politicas_privacidade.html">Políticas</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Solicitação de Exclusão de Dados</h1>
+            <p>Exerça seu direito de exclusão de dados pessoais conforme a LGPD</p>
+        </div>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+            <!-- Introduction -->
+            <section class="policy-section" data-aos="fade-up">
+                <h2>Direito à Exclusão de Dados</h2>
+                <p>De acordo com a Lei Geral de Proteção de Dados (LGPD), você tem o direito de solicitar a exclusão total dos seus dados pessoais armazenados em nossos sistemas. Este direito é garantido pelo artigo 18 da LGPD.</p>
+
+                <div class="highlight-box">
+                    <h4>Quando a Exclusão é Possível</h4>
+                    <p>A exclusão será realizada quando não houver obrigação legal, contractual ou legítimo interesse que justifique a manutenção dos dados, ou quando você revogar seu consentimento para o tratamento.</p>
+                </div>
+
+                <div class="warning-box">
+                    <h4>Atenção</h4>
+                    <p>A exclusão de dados é irreversível e pode afetar sua capacidade de utilizar nossos serviços. Certifique-se de que realmente deseja prosseguir com esta solicitação.</p>
+                </div>
+            </section>
+
+            <!-- Process -->
+            <section class="policy-section" data-aos="fade-up">
+                <h2>Processo de Solicitação</h2>
+
+                <h3>1. Verificação de Identidade</h3>
+                <p>Para garantir a segurança e privacidade dos dados, precisamos verificar sua identidade antes de processar qualquer solicitação de exclusão.</p>
+
+                <h3>2. Análise da Solicitação</h3>
+                <p>Após receber sua solicitação, analisaremos se há impedimentos legais ou técnicos para a exclusão dos dados.</p>
+
+                <h3>3. Execução da Exclusão</h3>
+                <p>Se aprovada, a exclusão será realizada em até 15 dias úteis, e você receberá confirmação por email.</p>
+
+                <h3>4. Dados que Não Podem Ser Excluídos</h3>
+                <ul>
+                    <li>Dados necessários para cumprimento de obrigações legais</li>
+                    <li>Dados em processos judiciais ou administrativos</li>
+                    <li>Dados anonimizados que não identifiquem o titular</li>
+                    <li>Dados necessários para exercício regular de direitos</li>
+                </ul>
+            </section>
+
+            <!-- Email Template -->
+            <section class="policy-section" data-aos="fade-up">
+                <h2>Como Solicitar a Exclusão</h2>
+
+                <p>Para solicitar a exclusão dos seus dados, envie um email para nosso Encarregado de Proteção de Dados (DPO) utilizando o modelo abaixo:</p>
+
+                <div class="email-template">
+                    <div class="email-header">MODELO DE EMAIL PARA SOLICITAÇÃO DE EXCLUSÃO</div>
+
+                    <div class="email-field">
+                        <span class="email-label">Para:</span> devstecnologia@gmail.com
+                    </div>
+
+                    <div class="email-field">
+                        <span class="email-label">Assunto:</span> Solicitação de Exclusão de Dados - [Seu Nome Completo]
+                    </div>
+
+                    <div class="email-field">
+                        <span class="email-label">Prezado(a) Encarregado de Proteção de Dados,</span>
+                    </div>
+
+                    <div class="email-body">
+Eu, [Seu Nome Completo], portador(a) do CPF [Seu CPF] e email [Seu Email],
+venho por meio deste exercer meu direito de exclusão de dados pessoais
+conforme previsto no artigo 18, inciso II, da Lei Geral de Proteção de
+Dados (Lei nº 13.709/2018).
+
+Solicito a exclusão total de todos os meus dados pessoais armazenados
+nos sistemas do Horafy Professional, incluindo:
+
+- Dados de autenticação (email, telefone, senha)
+- Dados pessoais e profissionais
+- Histórico de agendamentos
+- Dados de clientes (se aplicável)
+- Dados de localização e dispositivo
+- Qualquer outro dado pessoal coletado
+
+Entendo que a exclusão é irreversível e pode afetar minha capacidade
+de utilizar os serviços. Mesmo assim, confirmo que desejo prosseguir
+com esta solicitação.
+
+Para verificação de identidade, estou anexando [descrever documento
+de identificação, como RG ou CNH] ou fornecendo as seguintes
+informações adicionais: [informações adicionais para verificação].
+
+Atenciosamente,
+
+[Seu Nome Completo]
+[Seu Email]
+[Seu Telefone]
+[Data da Solicitação]
+                    </div>
+                </div>
+
+                <h3>Instruções para Envio</h3>
+                <ul>
+                    <li>Substitua as informações entre colchetes [] pelos seus dados reais</li>
+                    <li>Anexe uma cópia de documento de identificação para verificação</li>
+                    <li>Envie o email de um endereço que possuímos em nossos registros</li>
+                    <li>Guarde o comprovante de envio do email</li>
+                </ul>
+            </section>
+
+            <!-- Alternative Methods -->
+            <section class="policy-section" data-aos="fade-up">
+                <h2>Métodos Alternativos de Solicitação</h2>
+
+                <p>Além do email, você também pode solicitar a exclusão através dos seguintes canais:</p>
+
+                <h3>Através do Aplicativo</h3>
+                <ul>
+                    <li>Acesse as configurações do aplicativo</li>
+                    <li>Procure pela opção "Privacidade" ou "Dados Pessoais"</li>
+                    <li>Selecione "Solicitar Exclusão de Dados"</li>
+                    <li>Siga as instruções na tela</li>
+                </ul>
+
+                <h3>Contato Direto</h3>
+                <ul>
+                    <li>Telefone: +55 11 956829669</li>
+                    <li>Endereço: São Paulo, SP - Brasil</li>
+                </ul>
+            </section>
+
+            <!-- Timeline -->
+            <section class="policy-section" data-aos="fade-up">
+                <h2>Prazos e Respostas</h2>
+
+                <h3>Prazo de Resposta</h3>
+                <p>Responderemos à sua solicitação em até 15 dias úteis, conforme determinado pela LGPD.</p>
+
+                <h3>Prazo de Execução</h3>
+                <p>Caso aprovada, a exclusão dos dados será realizada em até 15 dias úteis após a resposta positiva.</p>
+
+                <h3>Confirmação</h3>
+                <p>Você receberá uma confirmação por email assim que a exclusão for concluída.</p>
+
+                <div class="highlight-box">
+                    <h4>Recusa da Solicitação</h4>
+                    <p>Se não for possível atender à solicitação, explicaremos os motivos legalmente fundamentados e informaremos sobre as possibilidades de recurso.</p>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <div class="contact-section" data-aos="fade-up">
+                <h3>Precisa de Ajuda?</h3>
+                <p>Nossa equipe está pronta para esclarecer dúvidas sobre o processo de exclusão de dados.</p>
+                <a href="mailto:devstecnologia@gmail.com" class="contact-button">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                    Enviar Email
+                </a>
+                <a href="politicas_privacidade.html" class="contact-button">
+                    <i class="fas fa-file-alt" style="margin-right: 0.5rem;"></i>
+                    Ver Políticas
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Back to top functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
