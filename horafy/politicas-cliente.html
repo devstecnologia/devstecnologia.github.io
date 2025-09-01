@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de Privacidade - Horafy Clientes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #1f2937;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 i {
+            color: #4f46e5;
+            font-size: 1.2rem;
+        }
+
+        .section h3 {
+            color: #374151;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            color: #6b7280;
+            line-height: 1.7;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-left: 4px solid #4f46e5;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .highlight-box h4 {
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .data-list {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .data-list h4 {
+            color: #1f2937;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .data-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .data-list li {
+            padding: 8px 0;
+            color: #6b7280;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .data-list li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .contact-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 20px 30px;
+            text-align: center;
+        }
+
+        .footer p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content {
+                padding: 30px 20px;
+            }
+
+            .section h2 {
+                font-size: 1.3rem;
+            }
+        }
+
+        .last-updated {
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1><i class="fas fa-shield-alt"></i> Política de Privacidade</h1>
+            <p>Horafy - Conectando você aos melhores serviços locais</p>
+        </header>
+
+        <div class="content">
+            <div class="last-updated">
+                Última atualização: 1 de setembro de 2025
+            </div>
+
+            <section class="section">
+                <h2><i class="fas fa-info-circle"></i> 1. Introdução</h2>
+                <p>Bem-vindo ao <strong>Horafy</strong>, o aplicativo que conecta clientes a empresas de serviços locais de forma prática e eficiente. Esta Política de Privacidade explica como coletamos, usamos, armazenamos e protegemos suas informações pessoais quando você utiliza nosso aplicativo móvel e serviços web.</p>
+
+                <p>O Horafy foi desenvolvido para facilitar o agendamento de serviços, permitindo que você encontre empresas próximas, agende atendimentos e gerencie seus compromissos de forma simples e segura.</p>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-lightbulb"></i> Nosso Compromisso</h4>
+                    <p>Estamos comprometidos em proteger sua privacidade e garantir que suas informações sejam tratadas com o máximo de segurança e transparência.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-user-shield"></i> 2. Informações que Coletamos</h2>
+
+                <h3>2.1 Informações Fornecidas por Você</h3>
+                <p>Coletamos informações que você nos fornece diretamente ao usar o aplicativo:</p>
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Nome completo</strong> - Para identificação pessoal</li>
+                        <li><strong>Número de telefone</strong> - Para verificação e comunicação</li>
+                        <li><strong>Endereço de e-mail</strong> - Para notificações e suporte</li>
+                        <li><strong>Localização geográfica</strong> - Para encontrar serviços próximos</li>
+                        <li><strong>Informações de agendamento</strong> - Serviços solicitados e horários</li>
+                        <li><strong>Dados de pagamento</strong> - Quando aplicável para serviços pagos</li>
+                    </ul>
+                </div>
+
+                <h3>2.2 Informações Coletadas Automaticamente</h3>
+                <p>Coletamos automaticamente certas informações quando você usa nosso aplicativo:</p>
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Dados de localização</strong> - Para encontrar empresas próximas</li>
+                        <li><strong>Informações do dispositivo</strong> - Modelo, sistema operacional, versão do app</li>
+                        <li><strong>Dados de uso</strong> - Como você interage com o aplicativo</li>
+                        <li><strong>Token de notificação</strong> - Para envio de notificações push</li>
+                        <li><strong>Logs de acesso</strong> - Para diagnóstico e melhoria do serviço</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-tasks"></i> 3. Como Usamos Suas Informações</h2>
+                <p>Utilizamos suas informações para:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Fornecer nossos serviços</strong> - Conectar você a empresas e agendar serviços</li>
+                        <li><strong>Personalizar sua experiência</strong> - Mostrar empresas próximas e relevantes</li>
+                        <li><strong>Processar pagamentos</strong> - Quando você contrata serviços pagos</li>
+                        <li><strong>Enviar notificações</strong> - Sobre agendamentos, lembretes e atualizações</li>
+                        <li><strong>Melhorar nosso aplicativo</strong> - Analisar uso e implementar melhorias</li>
+                        <li><strong>Garantir segurança</strong> - Prevenir fraudes e uso indevido</li>
+                        <li><strong>Atender obrigações legais</strong> - Cumprir leis e regulamentos aplicáveis</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-share-alt"></i> 4. Compartilhamento de Informações</h2>
+                <p>Suas informações podem ser compartilhadas nas seguintes situações:</p>
+
+                <h3>4.1 Com Empresas Parceiras</h3>
+                <p>Quando você agenda um serviço, compartilhamos informações necessárias com a empresa prestadora:</p>
+                <div class="data-list">
+                    <ul>
+                        <li>Nome e telefone para contato</li>
+                        <li>Endereço para prestação do serviço</li>
+                        <li>Detalhes do serviço agendado</li>
+                        <li>Horário e data do atendimento</li>
+                    </ul>
+                </div>
+
+                <h3>4.2 Com Provedores de Serviços</h3>
+                <p>Utilizamos serviços de terceiros para operar nossa plataforma:</p>
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Firebase</strong> - Para notificações push e autenticação</li>
+                        <li><strong>Google Maps</strong> - Para localização e mapas</li>
+                        <li><strong>Processadores de pagamento</strong> - Para transações seguras</li>
+                        <li><strong>Serviços de análise</strong> - Para melhorar nossa plataforma</li>
+                    </ul>
+                </div>
+
+                <h3>4.3 Obrigações Legais</h3>
+                <p>Podemos compartilhar informações quando exigido por lei ou para proteger direitos legais.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-lock"></i> 5. Segurança dos Dados</h2>
+                <p>Implementamos medidas de segurança robustas para proteger suas informações:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Criptografia</strong> - Dados transmitidos e armazenados são criptografados</li>
+                        <li><strong>Armazenamento seguro</strong> - Uso de cofres digitais e bancos de dados protegidos</li>
+                        <li><strong>Controle de acesso</strong> - Apenas pessoal autorizado tem acesso aos dados</li>
+                        <li><strong>Monitoramento contínuo</strong> - Sistema de detecção de ameaças e vulnerabilidades</li>
+                        <li><strong>Atualizações regulares</strong> - Manutenção e atualização de sistemas de segurança</li>
+                    </ul>
+                </div>
+
+                <div class="highlight-box">
+                    <h4><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <p>Embora implementemos medidas de segurança robustas, nenhum método de transmissão ou armazenamento eletrônico é 100% seguro. Não podemos garantir segurança absoluta.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-clock"></i> 6. Retenção de Dados</h2>
+                <p>Mantemos suas informações apenas pelo tempo necessário para cumprir as finalidades descritas:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Dados da conta</strong> - Mantidos enquanto sua conta estiver ativa</li>
+                        <li><strong>Histórico de agendamentos</strong> - Mantidos por 5 anos para garantia e suporte</li>
+                        <li><strong>Dados de localização</strong> - Mantidos apenas durante a sessão ativa</li>
+                        <li><strong>Dados analíticos</strong> - Anonimizados após 2 anos</li>
+                        <li><strong>Dados obrigatórios por lei</strong> - Mantidos conforme legislação aplicável</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-user-cog"></i> 7. Seus Direitos</h2>
+                <p>Você tem os seguintes direitos sobre seus dados pessoais:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Acesso</strong> - Solicitar cópia dos dados que mantemos sobre você</li>
+                        <li><strong>Correção</strong> - Atualizar ou corrigir informações incorretas</li>
+                        <li><strong>Exclusão</strong> - Solicitar a exclusão de seus dados pessoais</li>
+                        <li><strong>Portabilidade</strong> - Receber seus dados em formato estruturado</li>
+                        <li><strong>Oposição</strong> - Opor-se ao processamento de seus dados</li>
+                        <li><strong>Revogação de consentimento</strong> - Retirar consentimento para processamento</li>
+                    </ul>
+                </div>
+
+                <p>Para exercer esses direitos, entre em contato conosco através dos canais informados nesta política.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-cookie-bite"></i> 8. Cookies e Tecnologias Similares</h2>
+                <p>Utilizamos cookies e tecnologias similares para melhorar sua experiência:</p>
+
+                <h3>8.1 Tipos de Cookies</h3>
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Cookies essenciais</strong> - Necessários para o funcionamento do aplicativo</li>
+                        <li><strong>Cookies de desempenho</strong> - Para analisar e melhorar o desempenho</li>
+                        <li><strong>Cookies de funcionalidade</strong> - Para lembrar suas preferências</li>
+                        <li><strong>Cookies de localização</strong> - Para serviços baseados em localização</li>
+                    </ul>
+                </div>
+
+                <p>Você pode gerenciar suas preferências de cookies nas configurações do seu dispositivo.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-users"></i> 9. Dados de Menores</h2>
+                <p>O Horafy não é destinado a menores de 18 anos. Não coletamos intencionalmente dados pessoais de menores de idade. Se tomarmos conhecimento de que coletamos dados de um menor, tomaremos medidas para excluir essas informações prontamente.</p>
+
+                <p>Se você é pai/mãe ou responsável e acredita que seu filho nos forneceu dados pessoais, entre em contato conosco.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-globe"></i> 10. Transferências Internacionais</h2>
+                <p>Suas informações podem ser transferidas e processadas em países diferentes do seu. Quando isso ocorre, garantimos que suas informações sejam protegidas por medidas de segurança adequadas e em conformidade com as leis de proteção de dados aplicáveis.</p>
+
+                <p>Utilizamos provedores de serviços em nuvem que podem armazenar dados em diferentes regiões geográficas para garantir alta disponibilidade e performance.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-edit"></i> 11. Alterações nesta Política</h2>
+                <p>Podemos atualizar esta Política de Privacidade periodicamente. Quando fizermos alterações significativas, notificaremos você através:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li>Notificação push no aplicativo</li>
+                        <li>E-mail cadastrado</li>
+                        <li>Aviso destacado no aplicativo</li>
+                    </ul>
+                </div>
+
+                <p>Recomendamos que você revise esta política periodicamente para se manter informado sobre como protegemos suas informações.</p>
+            </section>
+
+            <section class="section">
+                <h2><i class="fas fa-gavel"></i> 12. Lei Aplicável</h2>
+                <p>Esta Política de Privacidade é regida pelas leis da República Federativa do Brasil, em especial:</p>
+
+                <div class="data-list">
+                    <ul>
+                        <li><strong>Lei Geral de Proteção de Dados (LGPD)</strong> - Lei nº 13.709/2018</li>
+                        <li><strong>Marco Civil da Internet</strong> - Lei nº 12.965/2014</li>
+                        <li><strong>Código de Defesa do Consumidor</strong> - Lei nº 8.078/1990</li>
+                    </ul>
+                </div>
+
+                <p>Qualquer disputa relacionada a esta política será resolvida nos tribunais brasileiros.</p>
+            </section>
+
+            <div class="contact-info">
+                <h3><i class="fas fa-envelope"></i> Entre em Contato</h3>
+                <p>Para dúvidas sobre esta Política de Privacidade ou exercer seus direitos, entre em contato:</p>
+                <p><strong>E-mail:</strong> privacidade@horafy.app</p>
+                <p><strong>Telefone:</strong> (11) 99999-9999</p>
+                <p><strong>Endereço:</strong> São Paulo, SP - Brasil</p>
+                <p><strong>Responsável:</strong> D.T LTDA</p>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>&copy; 2025 Horafy - Todos os direitos reservados. | Desenvolvido por D.T LTDA</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling para links internos (se houver)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de fade-in para seções quando visíveis
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Aplicar animação às seções
+        document.querySelectorAll('.section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
