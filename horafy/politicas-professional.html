@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Políticas de Privacidade - Horafy Professional</title>
+    
+    <!-- CSS Externos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: #667eea;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Header */
+        .page-header {
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            animation: fadeInUp 1s ease;
+        }
+
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .last-updated {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        /* Content */
+        .content-wrapper {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+
+        /* Navigation */
+        .policy-nav {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .policy-nav h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .policy-nav ul {
+            list-style: none;
+        }
+
+        .policy-nav li {
+            margin-bottom: 0.5rem;
+        }
+
+        .policy-nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .policy-nav a:hover {
+            color: #764ba2;
+        }
+
+        /* Sections */
+        .policy-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .policy-section:last-child {
+            border-bottom: none;
+        }
+
+        .policy-section h2 {
+            color: #333;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-top: 1rem;
+        }
+
+        .policy-section h3 {
+            color: #667eea;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .policy-section p {
+            margin-bottom: 1rem;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .policy-section ul {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea10 0%, #764ba210 100%);
+            border-left: 4px solid #667eea;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .highlight-box h4 {
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact section */
+        .contact-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .contact-section h3 {
+            margin-bottom: 1rem;
+        }
+
+        .contact-section p {
+            margin-bottom: 1rem;
+            opacity: 0.9;
+        }
+
+        .contact-button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        .contact-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .content-wrapper {
+                padding: 2rem 1.5rem;
+            }
+
+            .policy-nav {
+                padding: 1.5rem;
+            }
+
+            .nav-menu { display: none; }
+            .mobile-menu-btn { display: flex; }
+
+            .nav-menu.active {
+                display: flex;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 1rem 2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Back to top button */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#" class="logo">Horafy Professional</a>
+            <nav class="nav-menu">
+                <a href="#">Início</a>
+                <a href="#">Sobre</a>
+                <a href="#">Contato</a>
+                <a href="#politicas">Políticas</a>
+            </nav>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Políticas de Privacidade</h1>
+            <p>Transparência e proteção dos seus dados são nossa prioridade</p>
+            <div class="last-updated">
+                <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>
+                Última atualização: 01 de Setembro de 2025
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content-wrapper">
+            <!-- Navigation -->
+            <div class="policy-nav" data-aos="fade-up">
+                <h3><i class="fas fa-list" style="margin-right: 0.5rem;"></i>Índice</h3>
+                <ul>
+                    <li><a href="#introducao">1. Introdução</a></li>
+                    <li><a href="#dados-coletados">2. Dados Coletados</a></li>
+                    <li><a href="#uso-dados">3. Como Usamos seus Dados</a></li>
+                    <li><a href="#compartilhamento">4. Compartilhamento de Dados</a></li>
+                    <li><a href="#seguranca">5. Segurança dos Dados</a></li>
+                    <li><a href="#direitos">6. Seus Direitos</a></li>
+                    <li><a href="#cookies">7. Cookies e Tecnologias</a></li>
+                    <li><a href="#alteracoes">8. Alterações na Política</a></li>
+                    <li><a href="#contato">9. Contato</a></li>
+                </ul>
+            </div>
+
+            <!-- Introduction -->
+            <section id="introducao" class="policy-section" data-aos="fade-up">
+                <h2>1. Introdução</h2>
+                <p>O Horafy Professional está comprometido em proteger e respeitar sua privacidade. Esta Política de Privacidade explica como coletamos, usamos, compartilhamos e protegemos suas informações pessoais quando você utiliza nosso aplicativo móvel para gestão de agendamentos profissionais.</p>
+                <div class="highlight-box">
+                    <h4>Nossa Promessa</h4>
+                    <p>Tratamos seus dados com o máximo cuidado e transparência, sempre em conformidade com a Lei Geral de Proteção de Dados (LGPD) e demais regulamentações aplicáveis.</p>
+                </div>
+                <p>Ao utilizar nosso aplicativo, você concorda com as práticas descritas nesta política. Se você não concordar com algum aspecto desta política, recomendamos que não utilize nossos serviços.</p>
+            </section>
+
+            <!-- Data Collection -->
+            <section id="dados-coletados" class="policy-section" data-aos="fade-up">
+                <h2>2. Dados Coletados</h2>
+
+                <h3>2.1 Informações que Você Fornece</h3>
+                <ul>
+                    <li><strong>Dados de Autenticação:</strong> Email, telefone, senha</li>
+                    <li><strong>Dados Pessoais:</strong> Nome, foto de perfil</li>
+                    <li><strong>Dados Profissionais:</strong> Informações da empresa, funcionários, serviços oferecidos</li>
+                    <li><strong>Dados de Clientes:</strong> Nomes, contatos, histórico de agendamentos</li>
+                    <li><strong>Dados de Agendamentos:</strong> Datas, horários, serviços solicitados</li>
+                    <li><strong>Dados Financeiros:</strong> Informações de pagamento para assinaturas</li>
+                </ul>
+
+                <h3>2.2 Informações Coletadas Automaticamente</h3>
+                <ul>
+                    <li><strong>Dados de Dispositivo:</strong> Modelo, sistema operacional, identificadores únicos</li>
+                    <li><strong>Dados de Localização:</strong> Localização aproximada para funcionalidades de deslocamento</li>
+                    <li><strong>Dados de Uso:</strong> Interações com o app, preferências, logs de erro</li>
+                    <li><strong>Dados de Notificações:</strong> Token do dispositivo para envio de notificações push</li>
+                </ul>
+
+                <h3>2.3 Integrações com Terceiros</h3>
+                <ul>
+                    <li><strong>Google Sign-In:</strong> Para autenticação simplificada</li>
+                    <li><strong>Firebase:</strong> Para mensagens push e analytics</li>
+                    <li><strong>Contatos do Dispositivo:</strong> Para importação de clientes (com permissão)</li>
+                </ul>
+            </section>
+
+            <!-- Data Usage -->
+            <section id="uso-dados" class="policy-section" data-aos="fade-up">
+                <h2>3. Como Usamos seus Dados</h2>
+
+                <h3>3.1 Finalidades Principais</h3>
+                <ul>
+                    <li>Fornecer e manter o serviço de agendamento profissional</li>
+                    <li>Gerenciar contas de usuários e empresas</li>
+                    <li>Processar agendamentos e comunicações</li>
+                    <li>Enviar notificações sobre agendamentos e lembretes</li>
+                    <li>Processar pagamentos de assinaturas</li>
+                    <li>Melhorar a experiência do usuário e funcionalidades do app</li>
+                </ul>
+
+                <h3>3.2 Análises e Melhorias</h3>
+                <ul>
+                    <li>Analisar padrões de uso para melhorar o aplicativo</li>
+                    <li>Detectar e prevenir fraudes ou uso indevido</li>
+                    <li>Personalizar a experiência baseada em preferências</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>Base Legal</h4>
+                    <p>Utilizamos seus dados com base no legítimo interesse, execução de contrato, cumprimento de obrigação legal ou seu consentimento explícito, conforme aplicável.</p>
+                </div>
+            </section>
+
+            <!-- Data Sharing -->
+            <section id="compartilhamento" class="policy-section" data-aos="fade-up">
+                <h2>4. Compartilhamento de Dados</h2>
+
+                <p>Não vendemos, alugamos ou comercializamos seus dados pessoais. Podemos compartilhar informações apenas nas seguintes situações:</p>
+                <h3>4.1 Prestadores de Serviços</h3>
+                <ul>
+                    <li>Provedores de nuvem e infraestrutura (Firebase, servidores)</li>
+                    <li>Serviços de processamento de pagamento</li>
+                    <li>Ferramentas de analytics e monitoramento</li>
+                    <li>Serviços de notificações push</li>
+                </ul>
+
+                <h3>4.2 Obrigações Legais</h3>
+                <ul>
+                    <li>Cumprimento de ordens judiciais</li>
+                    <li>Atendimento a autoridades competentes</li>
+                    <li>Proteção de direitos e segurança de usuários</li>
+                </ul>
+
+                <h3>4.3 Compartilhamento Necessário</h3>
+                <ul>
+                    <li>Entre profissionais e clientes para agendamentos</li>
+                    <li>Com funcionários da empresa para gestão de agendamentos</li>
+                </ul>
+            </section>
+
+            <!-- Security -->
+            <section id="seguranca" class="policy-section" data-aos="fade-up">
+                <h2>5. Segurança dos Dados</h2>
+
+                <p>Implementamos medidas técnicas e organizacionais apropriadas para proteger seus dados:</p>
+                <ul>
+                    <li><strong>Criptografia:</strong> Dados em trânsito e repouso são criptografados</li>
+                    <li><strong>Armazenamento Seguro:</strong> Uso de armazenamento criptografado no dispositivo</li>
+                    <li><strong>Controle de Acesso:</strong> Acesso restrito baseado em necessidade</li>
+                    <li><strong>Monitoramento:</strong> Sistemas de detecção de ameaças 24/7</li>
+                    <li><strong>Backup:</strong> Rotinas regulares de backup e recuperação</li>
+                    <li><strong>Atualizações:</strong> Manutenção regular de segurança</li>
+                </ul>
+
+                <div class="highlight-box">
+                    <h4>Firebase Security</h4>
+                    <p>Utilizamos os padrões de segurança do Google Firebase, que incluem autenticação robusta, regras de segurança em tempo real e conformidade com GDPR.</p>
+                </div>
+            </section>
+
+            <!-- Rights -->
+            <section id="direitos" class="policy-section" data-aos="fade-up">
+                <h2>6. Seus Direitos</h2>
+
+                <p>De acordo com a LGPD, você tem os seguintes direitos:</p>
+
+                <ul>
+                    <li><strong>Acesso:</strong> Solicitar informações sobre o tratamento dos seus dados</li>
+                    <li><strong>Correção:</strong> Corrigir dados incompletos, inexatos ou desatualizados</li>
+                    <li><strong>Exclusão:</strong> Solicitar a eliminação dos dados desnecessários</li>
+                    <li><strong>Portabilidade:</strong> Solicitar a portabilidade dos dados</li>
+                    <li><strong>Oposição:</strong> Opor-se ao tratamento baseado em legítimo interesse</li>
+                    <li><strong>Revogação:</strong> Revogar o consentimento a qualquer momento</li>
+                </ul>
+
+                <h3>Como Exercer seus Direitos</h3>
+                <p>Para exercer qualquer um desses direitos, entre em contato conosco através do email <strong>devstecnologia@gmail.com</strong> ou utilize as configurações do aplicativo.</p>
+            </section>
+
+            <!-- Cookies -->
+            <section id="cookies" class="policy-section" data-aos="fade-up">
+                <h2>7. Cookies e Tecnologias Similares</h2>
+
+                <h3>7.1 Tecnologias Utilizadas</h3>
+                <ul>
+                    <li><strong>Local Storage:</strong> Para armazenar preferências e dados offline</li>
+                    <li><strong>Firebase Analytics:</strong> Para entender o uso do aplicativo</li>
+                    <li><strong>Notificações Push:</strong> Para lembretes e atualizações</li>
+                    <li><strong>Geolocalização:</strong> Para funcionalidades de deslocamento (com permissão)</li>
+                </ul>
+
+                <h3>7.2 Gerenciamento de Permissões</h3>
+                <p>Você pode gerenciar suas permissões através das configurações do dispositivo e do aplicativo, incluindo notificações, localização e acesso aos contatos.</p>
+            </section>
+
+            <!-- Changes -->
+            <section id="alteracoes" class="policy-section" data-aos="fade-up">
+                <h2>8. Alterações na Política</h2>
+
+                <p>Esta política pode ser atualizada periodicamente para refletir mudanças em nossas práticas ou requisitos legais. Quando isso ocorrer:</p>
+                <ul>
+                    <li>Publicaremos a versão atualizada no aplicativo</li>
+                    <li>Notificaremos sobre mudanças significativas via push notification</li>
+                    <li>Atualizaremos a data da última modificação</li>
+                </ul>
+
+                <p>Recomendamos que revise esta política periodicamente para se manter informado sobre como protegemos suas informações.</p>
+            </section>
+
+            <!-- Contact -->
+            <section id="contato" class="policy-section" data-aos="fade-up">
+                <h2>9. Informações de Contato</h2>
+
+                <h3>Encarregado de Proteção de Dados (DPO)</h3>
+                <ul>
+                    <li><strong>Email:</strong> devstecnologia@gmail.com</li>
+                    <li><strong>Telefone:</strong> +55 11 956829669</li>
+                    <li><strong>Endereço:</strong> São Paulo, SP - Brasil</li>
+                </ul>
+
+                <h3>Autoridade Nacional de Proteção de Dados (ANPD)</h3>
+                <p>Você também pode entrar em contato com a ANPD através do site <strong>gov.br/anpd</strong> para questões relacionadas à proteção de dados.</p>
+            </section>
+
+            <!-- Contact Section -->
+            <div class="contact-section" data-aos="fade-up">
+                <h3>Dúvidas sobre Privacidade?</h3>
+                <p>Nossa equipe está pronta para esclarecer qualquer questão sobre o tratamento dos seus dados.</p>
+                <a href="mailto:devstecnologia@gmail.com" class="contact-button">
+                    <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                    Entre em Contato
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+        }
+
+        // Back to top functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
