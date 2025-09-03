@@ -130,25 +130,6 @@
     </style>
 </head>
 <body>
-    <!-- Header Global -->
-    <header class="header">
-        <div class="nav-container">
-            <a href="../index.html" class="logo">Devs T I LTDA</a>
-            <nav class="nav-menu">
-                <a href="../index.html">Início</a>
-                <a href="../index.html#services">Serviços</a>
-                <a href="../index.html#about">Sobre</a>
-                <a href="../index.html#contact">Contato</a>
-                <a href="../politicas.html">Políticas</a>
-            </nav>
-            <div class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </header>
-
     <div class="container">
         <!-- Page Header -->
         <div class="page-header">
@@ -474,6 +455,27 @@
 
         window.addEventListener('scroll', updateActiveIndex);
         window.addEventListener('load', updateActiveIndex);
+
+        // Load shared header and disable navigation on policy pages
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                const placeholder = document.getElementById('header-placeholder');
+                if (placeholder) placeholder.innerHTML = data;
+
+                const navLinks = document.querySelectorAll('.nav-menu a');
+                navLinks.forEach(a => {
+                    a.dataset.origHref = a.getAttribute('href') || '';
+                    a.setAttribute('href', 'javascript:void(0)');
+                    a.addEventListener('click', (e) => e.preventDefault());
+                    a.style.cursor = 'default';
+                    a.style.opacity = '0.9';
+                });
+
+                const mobileBtn = document.querySelector('.mobile-menu-btn');
+                if (mobileBtn) mobileBtn.style.display = 'none';
+            })
+            .catch(() => {});
 
         // Animação de fade-in para seções quando visíveis
         const observerOptions = {
