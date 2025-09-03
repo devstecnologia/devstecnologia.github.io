@@ -9,11 +9,23 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="../assets/css/dark-theme.css" rel="stylesheet">
-    <link href="../assets/css/policy-index.css" rel="stylesheet">
+    <link href="../../assets/css/dark-theme.css" rel="stylesheet">
+    <link href="../../assets/css/policy-index.css" rel="stylesheet">
     
-    <style>
+   <style>
         /* Estilos específicos da página */
+        body {
+            background: var(--bg-gradient-primary);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+      
+
+        .content-wrapper {
+            padding: 40px 30px;
+        }
+
         .section {
             margin-bottom: var(--spacing-8);
         }
@@ -37,13 +49,25 @@
             color: white;
             text-decoration: none;
         }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: var(--radius-md);
+            }
+
+            .content-wrapper {
+                padding: var(--spacing-xl) var(--spacing-lg);
+            }
+        }
     </style>
 <body>
     <div class="container">
         <!-- Page Header -->
         <div class="page-header">
-            <h1>Políticas de Privacidade</h1>
-            <p>Transparência e proteção dos seus dados são nossa prioridade</p>
+            <h1><i class="fas fa-shield-alt"></i> Política de Privacidade</h1>
+            <p>Agenditofy: Agenda Profissional</p>
             <div class="last-updated">
                 <i class="fas fa-calendar-alt" style="margin-right: 0.5rem;"></i>
                 Última atualização: 01 de Setembro de 2025
@@ -248,12 +272,16 @@
             </section>
 
             <!-- Contact Section -->
-            <div class="contact-section" data-aos="fade-up">
-                <h3>Dúvidas sobre Privacidade?</h3>
-                <p>Nossa equipe está pronta para esclarecer qualquer questão sobre o tratamento dos seus dados.</p>
-                <a href="mailto:devstecnologia@gmail.com" class="btn-primary">
+             <div class="contact-section" data-aos="fade-up">
+                <h3>Precisa de Ajuda?</h3>
+                <p>Nossa equipe está pronta para esclarecer dúvidas sobre o processo de exclusão de dados.</p>
+                <a href="mailto:devstecnologia@gmail.com" class="contact-button">
                     <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
-                    Entre em Contato
+                    Enviar Email
+                </a>
+                <a href="policies.html" class="contact-button">
+                    <i class="fas fa-file-alt" style="margin-right: 0.5rem;"></i>
+                    Ver Políticas
                 </a>
             </div>
         </div>

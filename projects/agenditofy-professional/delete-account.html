@@ -3,16 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solicitação de Exclusão de Dados - Agenditofy Clientes</title>
+    <title>Solicitação de Exclusão de Dados - Agenditofy Professional</title>
 
     <!-- CSS Externos -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <link href="../assets/css/dark-theme.css" rel="stylesheet">
+    <link href="../../assets/css/dark-theme.css" rel="stylesheet">
 
     <style>
         /* Estilos específicos da página */
+         body {
+            background: var(--bg-gradient-primary);
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+      
+
+        .content-wrapper {
+            padding: 40px 30px;
+        }
+
+        .section {
+            margin-bottom: var(--spacing-8);
+        }
+
         .back-to-main {
             position: fixed;
             top: 20px;
@@ -31,6 +47,18 @@
             background: var(--primary-dark);
             color: white;
             text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: var(--radius-md);
+            }
+
+            .content-wrapper {
+                padding: var(--spacing-xl) var(--spacing-lg);
+            }
         }
 
         .email-template {
@@ -84,7 +112,7 @@
     <div class="container">
         <!-- Page Header -->
         <div class="page-header">
-            <h1>Solicitação de Exclusão de Dados</h1>
+             <h1><i class="fas fa-trash-alt"></i> Solicitação de Exclusão de Dados</h1>
             <p>Exerça seu direito de exclusão de dados pessoais conforme a LGPD</p>
         </div>
 
@@ -186,27 +214,6 @@ Atenciosamente,
                 </ul>
             </section>
 
-            <!-- Alternative Methods -->
-            <section class="section" data-aos="fade-up">
-                <h2>Métodos Alternativos de Solicitação</h2>
-
-                <p>Além do email, você também pode solicitar a exclusão através dos seguintes canais:</p>
-
-                <h3>Através do Aplicativo</h3>
-                <ul>
-                    <li>Acesse as configurações do aplicativo</li>
-                    <li>Procure pela opção "Privacidade" ou "Dados Pessoais"</li>
-                    <li>Selecione "Solicitar Exclusão de Dados"</li>
-                    <li>Siga as instruções na tela</li>
-                </ul>
-
-                <h3>Contato Direto</h3>
-                <ul>
-                    <li>Telefone: +55 11 956829668</li>
-                    <li>Endereço: São Paulo, SP - Brasil</li>
-                </ul>
-            </section>
-
             <!-- Timeline -->
             <section class="section" data-aos="fade-up">
                 <h2>Prazos e Respostas</h2>
@@ -234,7 +241,7 @@ Atenciosamente,
                     <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
                     Enviar Email
                 </a>
-                <a href="politicas-professional.html" class="contact-button">
+                <a href="policies.html" class="contact-button">
                     <i class="fas fa-file-alt" style="margin-right: 0.5rem;"></i>
                     Ver Políticas
                 </a>
