@@ -5,7 +5,7 @@
 /* Container principal do índice */
 .policy-index {
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.95) 100%);
-    border: 1px solid rgba(96, 165, 250, 0.2);
+    border: 1px solid rgba(218, 165, 32, 0.3);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 2rem;
@@ -27,7 +27,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa, #93c5fd);
+    background: linear-gradient(90deg, #7e7d22, #b1aa1e, #e4d903);
 }
 
 /* Título do índice */
@@ -43,7 +43,7 @@
 }
 
 .policy-index h3 i {
-    color: #60a5fa;
+    color: #e4d903;
     font-size: 1.25rem;
 }
 
@@ -54,7 +54,7 @@
     left: 0;
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    background: linear-gradient(90deg, #beca36, #e4d903);
     border-radius: 2px;
 }
 
@@ -76,7 +76,7 @@
 
 .policy-index li:hover {
     transform: translateX(4px);
-    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    box-shadow: 0 4px 12px rgba(218, 165, 32, 0.15);
 }
 
 /* Links do índice */
@@ -96,9 +96,9 @@
 
 .policy-index a:hover {
     color: #ffffff;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(96, 165, 250, 0.1) 100%);
-    border-color: rgba(96, 165, 250, 0.3);
-    text-shadow: 0 0 8px rgba(96, 165, 250, 0.3);
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
+    border-color: rgba(218, 165, 32, 0.3);
+    text-shadow: 0 0 8px rgba(218, 165, 32, 0.3);
     transform: translateX(8px);
 }
 
@@ -115,7 +115,7 @@
     transform: translateY(-50%);
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3b82f6, #60a5fa);
+    background: linear-gradient(90deg, #9f992a, #e4d903);
     transition: width 0.3s ease;
     border-radius: 1px;
 }
@@ -127,19 +127,19 @@
 /* Indicador de seção ativa */
 .policy-index a.active {
     color: #ffffff;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
-    border-color: rgba(96, 165, 250, 0.5);
-    box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
+    background: linear-gradient(135deg, rgba(218, 165, 32, 0.2) 0%, rgba(212, 175, 55, 0.2) 100%);
+    border-color: rgba(218, 165, 32, 0.5);
+    box-shadow: 0 0 20px rgba(218, 165, 32, 0.2);
 }
 
 .policy-index a.active::before {
     width: 24px;
-    background: linear-gradient(90deg, #60a5fa, #93c5fd);
+    background: linear-gradient(90deg, #d4af37, #daa520);
 }
 
 /* Efeitos de foco para acessibilidade */
 .policy-index a:focus {
-    outline: 2px solid #60a5fa;
+    outline: 2px solid #d4af37;
     outline-offset: 2px;
 }
 
@@ -213,7 +213,7 @@
 @media (prefers-color-scheme: dark) {
     .policy-index {
         background: linear-gradient(135deg, rgba(15, 23, 42, 0.98) 0%, rgba(30, 41, 59, 0.98) 100%);
-        border-color: rgba(96, 165, 250, 0.3);
+        border-color: rgba(218, 165, 32, 0.3);
     }
 }
 

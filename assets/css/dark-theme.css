@@ -8,27 +8,27 @@
     --bg-card: #2d2d2d;
     --bg-gradient-primary: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
     --bg-gradient-secondary: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
-    --bg-gradient-accent: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --bg-gradient-accent: linear-gradient(135deg, #E4EB1B 0%, #edb73a 100%);
     
     /* Text Colors */
     --text-primary: #ffffff;
     --text-secondary: #e2e8f0;
     --text-muted: #94a3b8;
-    --text-accent: #4f46e5;
+    --text-accent: #E4EB1B;
     
     /* Border Colors */
     --border-primary: #3a3a3a;
     --border-secondary: #4a4a4a;
-    --border-accent: #4f46e5;
+    --border-accent: #E4EB1B;
     
     /* Shadow */
     --shadow-primary: 0 10px 30px rgba(0, 0, 0, 0.3);
     --shadow-secondary: 0 20px 50px rgba(0, 0, 0, 0.2);
-    --shadow-accent: 0 10px 30px rgba(79, 70, 229, 0.3);
+    --shadow-accent: 0 10px 30px rgba(208, 229, 70, 0.3);
     
     /* Accent Colors */
-    --accent-primary: #4f46e5;
-    --accent-secondary: #7c3aed;
+    --accent-primary: #E4EB1B;
+    --accent-secondary: #edb73a;
     --accent-success: #10b981;
     --accent-warning: #f59e0b;
     --accent-danger: #ef4444;
@@ -115,7 +115,7 @@ body {
 .logo {
     font-size: 1.75rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #b9b25d 0%, #c9cf36 50%, #dec504 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -132,7 +132,7 @@ body {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 50%, #1d4ed8 100%);
+    background: linear-gradient(135deg, #d4af37 0%, #daa520 50%, #c9a347 100%);
     border-radius: 8px;
     z-index: -1;
     opacity: 0;
@@ -164,8 +164,8 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #60a5fa;
-    background: rgba(96, 165, 250, 0.1);
+    color: #d4af37;
+    background: rgba(218, 165, 32, 0.1);
     transform: translateY(-1px);
 }
 
@@ -176,7 +176,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #60a5fa 0%, #3b82f6 100%);
+    background: linear-gradient(90deg, #d4af37 0%, #daa520 100%);
     border-radius: 1px;
     transition: all 0.3s ease;
     transform: translateX(-50%);
@@ -197,7 +197,7 @@ body {
 }
 
 .mobile-menu-btn:hover {
-    background: rgba(96, 165, 250, 0.1);
+    background: rgba(218, 165, 32, 0.1);
 }
 
 .mobile-menu-btn span {
@@ -210,7 +210,7 @@ body {
 }
 
 .mobile-menu-btn:hover span {
-    background: #60a5fa;
+    background: #d4af37;
 }
 
 /* Common Container Styles */
@@ -423,7 +423,7 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 15px 40px rgba(218, 165, 32, 0.4);
 }
 
 .btn-secondary {
@@ -464,7 +464,7 @@ body {
 
 .back-to-top:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(79, 70, 229, 0.4);
+    box-shadow: 0 15px 40px rgba(218, 165, 32, 0.4);
 }
 
 /* Navigation Menu */
@@ -533,7 +533,7 @@ body {
 .form-group select:focus {
     outline: none;
     border-color: var(--accent-primary);
-    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+    box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.1);
 }
 
 .form-group input::placeholder,
@@ -611,7 +611,7 @@ body {
     }
 
     .nav-menu.active a:hover {
-        background: rgba(96, 165, 250, 0.15);
+        background: rgba(218, 165, 32, 0.15);
         transform: translateY(0);
     }
 }
@@ -670,11 +670,11 @@ html {
 
 /* Selection styling */
 ::selection {
-    background: rgba(79, 70, 229, 0.3);
+    background: rgba(218, 165, 32, 0.3);
     color: var(--text-primary);
 }
 
 ::-moz-selection {
-    background: rgba(79, 70, 229, 0.3);
+    background: rgba(218, 165, 32, 0.3);
     color: var(--text-primary);
 }
